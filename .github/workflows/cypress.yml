@@ -19,4 +19,4 @@ jobs:
         with:
           spec: cypress/e2e/website.cy.js
         env:
-          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+          CYPRESS_url: ${{ secrets.CYPRESS_URL }}
