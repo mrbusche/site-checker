@@ -11,7 +11,7 @@ FROM_NUMBER
 TO_NUMBER
 ```
 
-This is also configured for the URL to be a secret, but you could also hardcode it in the Cypress test
+This is configured for the URL to be a secret, but you could also hardcode it in the Cypress test
 
 ```shell
 CYPRESS_URL
