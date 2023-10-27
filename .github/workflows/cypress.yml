@@ -14,11 +14,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           spec: cypress/e2e/website.cy.js
         env:
           CYPRESS_url: ${{ secrets.CYPRESS_URL }}
+      - name: Run if failure
+        if: failure()
+        run: npm run send-message
+        env:
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          FROM_NUMBER: ${{ secrets.FROM_NUMBER }}
+          TO_NUMBER: ${{ secrets.TO_NUMBER }}
