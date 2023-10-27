@@ -22,3 +22,11 @@ jobs:
           spec: cypress/e2e/website.cy.js
         env:
           CYPRESS_url: ${{ secrets.CYPRESS_URL }}
+      - name: Run if success
+        if: success()
+        run: npm run send-message
+        env:
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          FROM_NUMBER: ${{ secrets.FROM_NUMBER }}
+          TO_NUMBER: ${{ secrets.TO_NUMBER }}

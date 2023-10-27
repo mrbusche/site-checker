@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "cypress": "^13.3.3"
+    "cypress": "13.3.3",
+    "twilio": "^4.19.0"
+  },
+  "scripts": {
+    "send-message": "node ./message.js"
   }
 }
