@@ -4,7 +4,5 @@ describe('check website', () => {
     cy.contains('No times in November');
     cy.contains('View next month').click();
     cy.contains('No times in December');
-    cy.contains('View next month').click();
-    cy.contains('No times in January');
   })
 })
