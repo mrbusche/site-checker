@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cypress": "13.6.2",
+    "cypress": "13.6.3",
     "twilio": "^4.19.0"
   },
   "scripts": {
